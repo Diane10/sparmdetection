@@ -6,14 +6,18 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
 
 
-st.write(""" 
-    # Spam Classifier Web App
+st.title("Email Classifier")
+	# st.subheader("ML App with Streamlit")
+html_temp = """
+	<div style="background-color:blue;padding:10px">
+	<h1 style="color:white;text-align:center;">Streamlit ML App </h1>
+	</div>
 
-    This app predicts whether an email or text is considered ***spam (1) or ham (0)*** 
-""")
+	"""
+st.markdown(html_temp,unsafe_allow_html=True)
 
 # Get user input
-user_input = st.text_input("Enter an email or text:")
+user_input =st.text_area("Enter Email Here","Type Here"))
 
 st.write("***User Email: ***:" , user_input)
 
