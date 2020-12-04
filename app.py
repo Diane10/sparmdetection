@@ -24,7 +24,7 @@ tokenizer = pickle.load(open(tokenizer_file, "rb"))
 # Prepare user input
 user_input = [user_input.split(" ")]
 text_seq = tokenizer.texts_to_sequences(user_input)
-padded_text_seq = pad_sequences(text_seq, maxlen=50, padding="post") 
+padded_text_seq = pad_sequences(text_seq, maxlen=4, padding="post") 
 
 # Load the model (keras)
 model_file = "model.h5"
