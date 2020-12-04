@@ -17,7 +17,7 @@ html_temp = """
 st.markdown(html_temp,unsafe_allow_html=True)
 
 # Get user input
-user_input =st.text_area("Enter Email Here","Type Here"))
+user_input =st.text_area("Enter Email Here","Type Here")
 
 st.write("***User Email: ***:" , user_input)
 
