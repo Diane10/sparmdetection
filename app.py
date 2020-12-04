@@ -18,7 +18,7 @@ user_input = st.text_input("Enter an email or text:")
 st.write("***User Email: ***:" , user_input)
 
 # Load the tokenizer object
-tokenizer_file = "tokenizer.pkl"
+tokenizer_file = "tokenize.sav"
 tokenizer = pickle.load(open(tokenizer_file, "rb"))
 
 # Prepare user input
@@ -27,7 +27,7 @@ text_seq = tokenizer.texts_to_sequences(user_input)
 padded_text_seq = pad_sequences(text_seq, maxlen=50, padding="post") 
 
 # Load the model (keras)
-model_file = "bilstm.h5"
+model_file = "model.h5"
 bilstm_model = load_model(model_file, compile = False)
 
 y_pred = bilstm_model.predict(padded_text_seq)
